@@ -1,0 +1,16 @@
+[ {
+  "id_envio" : "001",
+  "cliente" : "Juan Perez",
+  "direccion" : "Calle 12 #45",
+  "estado" : "Entregado"
+}, {
+  "id_envio" : "002",
+  "cliente" : "Maria Gomez",
+  "direccion" : "Avenida 10 #33",
+  "estado" : "En trÃ¡nsito"
+}, {
+  "id_envio" : "003",
+  "cliente" : "Luis Mora",
+  "direccion" : "Carrera 8 #22",
+  "estado" : "Pendiente"
+} ]

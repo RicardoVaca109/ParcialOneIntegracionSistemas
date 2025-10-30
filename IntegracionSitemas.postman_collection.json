@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "0515ccca-c973-44dd-9b69-8de2ada38792",
+		"name": "IntegracionSitemas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48762547",
+		"_collection_link": "https://ricardovaca109-8107389.postman.co/workspace/ricardovaca109's-Workspace~4295b14d-11ef-4164-8a99-b40bb9a6a874/collection/48762547-0515ccca-c973-44dd-9b69-8de2ada38792?action=share&source=collection_link&creator=48762547"
+	},
+	"item": [
+		{
+			"name": "GetALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/envios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"envios"
+					]
+				}
+			},
+			"response": [
+				[
+					{
+						"id_envio": "001",
+						"cliente": "Juan Perez",
+						"direccion": "Calle 12 #45",
+						"estado": "Entregado"
+					},
+					{
+						"id_envio": "002",
+						"cliente": "Maria Gomez",
+						"direccion": "Avenida 10 #33",
+						"estado": "En trÃ¡nsito"
+					},
+					{
+						"id_envio": "003",
+						"cliente": "Luis Mora",
+						"direccion": "Carrera 8 #22",
+						"estado": "Pendiente"
+					},
+					{
+						"id_envio": "004",
+						"cliente": "Ana Perez",
+						"direccion": "Calle Falsa 123",
+						"estado": "Pendiente"
+					}
+				]
+			]
+		},
+		{
+			"name": "GetByID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/envios/001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"envios",
+						"001"
+					]
+				}
+			},
+			"response": [
+				{
+					"id_envio": "001",
+					"cliente": "Juan Perez",
+					"direccion": "Calle 12 #45",
+					"estado": "Entregado"
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_envio\": \"004\",\r\n    \"cliente\": \"Ana Perez\",\r\n    \"direccion\": \"Calle Falsa 123\",\r\n    \"estado\": \"Pendiente\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/envios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"envios"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
